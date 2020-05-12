@@ -7,4 +7,6 @@ The purpose of this project is to control the LG Ductless HVAC system in my cond
   
 2. **Client Webapp (Flask)** - This webapp will run on each raspberry pi zero. This won't have a UI, but will accept REST calls to perform some IR operations are described here 
 
-3. IR Controller (LIRC) - After capturing the remote control codes, calls to the webapp will trigger these to be blasted from the IR emitter attached to the raspberry pi
+3. **IR Controller (LIRC)** - After capturing the remote control codes, calls to the webapp will trigger these to be blasted from the IR emitter attached to the raspberry pi
+
+![alt text](https://imgur.com/a/vdFaUodg "Diagram")

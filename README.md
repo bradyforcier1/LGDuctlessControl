@@ -21,5 +21,6 @@ dtoverlay=gpio-ir,gpio_pin=22 #(without: in)
 dtoverlay=gpio-ir-tx,gpio_pin=23 #(without: out)
 
 2. 
-mv lirc_options.conf.dist lirc_options.conf
-mv lircd.conf.dist  lircd.conf
+mv /etc/lirc/lirc_options.conf.dist /etc/lirc/lirc_options.conf
+mv /etc/lirc/lircd.conf.dist /etc/lirc/lircd.conf
+mv /etc/lirc/lircd.conf.d/devinput.lircd.conf /etc/lirc/lircd.conf.d/devinput.lircd.dist

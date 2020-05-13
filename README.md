@@ -15,11 +15,11 @@ The purpose of this project is to control the LG Ductless HVAC system in my cond
 
 This project is based off this, but with a couple modications
 https://www.instructables.com/id/Raspberry-Pi-Zero-Universal-Remote/
+
 1. 
 dtoverlay=gpio-ir,gpio_pin=22 #(without: in)
-
 dtoverlay=gpio-ir-tx,gpio_pin=23 #(without: out)
+
 2. 
 mv lirc_options.conf.dist lirc_options.conf
-
 mv lircd.conf.dist  lircd.conf

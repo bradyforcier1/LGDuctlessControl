@@ -24,3 +24,8 @@ dtoverlay=gpio-ir-tx,gpio_pin=23 #(without: out)
 mv /etc/lirc/lirc_options.conf.dist /etc/lirc/lirc_options.conf
 mv /etc/lirc/lircd.conf.dist /etc/lirc/lircd.conf
 mv /etc/lirc/lircd.conf.d/devinput.lircd.conf /etc/lirc/lircd.conf.d/devinput.lircd.dist
+
+3.
+In /etc/lirc/lirc_options.conf:
+driver          = default
+device          = /dev/lirc1

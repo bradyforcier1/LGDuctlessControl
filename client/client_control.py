@@ -3,6 +3,8 @@ from time import strftime
 from flask import Flask, render_template, flash, request, redirect, url_for
 from wtforms import Form, TextField, TextAreaField, validators, StringField, SubmitField
 
+import subprocess
+
 DEBUG = True
 app = Flask(__name__)
 app.config.from_object(__name__)
@@ -24,11 +26,13 @@ def sleep():
 @app.route("/off", methods=["GET"])
 def off():
     print ("Turning off")
+    subprocess.call("./on.sh")
     return '', 200 
 
 @app.route("/on", methods=["GET"])
 def on():
     print ("Turning on")
+    subprocess.call("./on.sh")
     return '', 200 
 
 if __name__ == "__main__":

@@ -28,3 +28,7 @@ mv /etc/lirc/lircd.conf.d/devinput.lircd.conf /etc/lirc/lircd.conf.d/devinput.li
 3.
 In order to record use:
 irrecord --disable-namespace -d /dev/lirc1
+
+4.
+Also had to follow this, because irrecrord doesn't work with buster
+https://www.raspberrypi.org/forums/viewtopic.php?t=235256

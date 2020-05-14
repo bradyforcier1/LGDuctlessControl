@@ -17,18 +17,13 @@ This project is based off this, but with a couple modications
 https://www.instructables.com/id/Raspberry-Pi-Zero-Universal-Remote/
 
 1. 
-dtoverlay=gpio-ir,gpio_pin=22 #(without: in)
-dtoverlay=gpio-ir-tx,gpio_pin=23 #(without: out)
+Also had to follow this, because irrecrord doesn't work with buster
+https://www.raspberrypi.org/forums/viewtopic.php?t=235256
 
-2. 
-mv /etc/lirc/lirc_options.conf.dist /etc/lirc/lirc_options.conf
-mv /etc/lirc/lircd.conf.dist /etc/lirc/lircd.conf
-mv /etc/lirc/lircd.conf.d/devinput.lircd.conf /etc/lirc/lircd.conf.d/devinput.lircd.dist
-
-3.
+2.
 In order to record use:
 irrecord --disable-namespace -d /dev/lirc1
 
-4.
-Also had to follow this, because irrecrord doesn't work with buster
-https://www.raspberrypi.org/forums/viewtopic.php?t=235256
+3.
+Note when recording I needed to set the device to be lirc0 (send) or lirc1 (record)
+

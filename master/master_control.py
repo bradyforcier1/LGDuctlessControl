@@ -15,9 +15,9 @@ class Zone(object):
         self.name = name
         self.ip = ip
 
-master_bedroom = Zone('master_bedroom', 'http://192.168.1.101:4998')
-guest_bedroom = Zone('guest_bedroom', 'http://192.168.1.101:4998')
-living_room = Zone('living_room', 'http://192.168.1.101:4998')
+master_bedroom = Zone('master_bedroom', 'http://192.168.1.110:4998')
+guest_bedroom = Zone('guest_bedroom', 'http://192.168.1.111:4998')
+living_room = Zone('living_room', 'http://192.168.1.112:4998')
 
 zones = (master_bedroom, guest_bedroom, living_room)
 
@@ -61,7 +61,7 @@ def off():
 @app.route("/on", methods=["GET"])
 def on():
     for zone in zones:
-      requests.get(zone.ip+'/off')
+      requests.get(zone.ip+'/on')
 
     flash("Turning all zones on")
     return redirect(url_for('index'))

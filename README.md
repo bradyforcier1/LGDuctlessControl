@@ -26,6 +26,5 @@ mv /etc/lirc/lircd.conf.dist /etc/lirc/lircd.conf
 mv /etc/lirc/lircd.conf.d/devinput.lircd.conf /etc/lirc/lircd.conf.d/devinput.lircd.dist
 
 3.
-In /etc/lirc/lirc_options.conf:
-driver          = default
-device          = /dev/lirc1
+In order to record use:
+irrecord --disable-namespace -d /dev/lirc1
